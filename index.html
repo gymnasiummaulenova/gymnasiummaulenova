@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+       body {
+        background-color: #ffffff;
+       }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ГУ "Гимназия им. С.Мауленова"</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+  </head>
+<header>
+    <div class="photo1">
+        <div class="name">ГУ "Гимназия им. С.Мауленова"</div>
+    </div>
+        <div class="wrapper">    
+            <nav class="dws-menu">
+                <ul>
+                    <li><a href="index.html"><i class="fa"></i>Главная</a></li>
+                    <li><a href="#"><i class="fa"></i>Гос.Символы</a>
+                        <ul>
+                            <li><a href="gerb.html">Герб</a></li>
+                            <li><a href="flag.html">Флаг</a></li>
+                            <li><a href="gimn.html">Гимн</a></li>
+                        </ul>
+                      </li>
+                    <li><a href="oschool.html"><i class="fa"></i>О школе</a>
+                        <ul>
+                            <li><a href="news.html">Новости</a></li>
+                        </ul>
+                      </li>
+                    <li><a href="contact.html"><i class="fa"></i>Контакты</a></li>
+                </ul>
+            </nav>
+        </div>    
+</header>
+<body>
+    <div class="slideshow-container">
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="image/shkola.jpg" style="width:100%; height: 500px;">
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="image/library-922998_1920.jpg" style="width:100%; height: 500px;">
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="image/knigi.jpg" style="width:100%; height: 500px;">
+        </div>
+      
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+      
+      <!-- The dots/circles -->
+      <div style="text-align: center;">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+      <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+
+<script>
+  var slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 6000); // Change image every 5 seconds
+  }
+</script>
+<!--Директор-->
+<div class="director">
+    <div>
+        <img class="imgdir" src="image/director.jpg" alt="">
+        <ul><a class="textdir" href="oschool.html">КУШМУРЗИН БЕКЕЖАН</a></ul>
+    </div>
+
+</div>
+<!-- Послание призедента-->>
+<div class="poslanie">
+    <div>
+        <img class="imgpres" src="image/pres.jpg" alt="">
+        <ul><a class="textpres" href="news.html">Касым-Жомарт Токаев</a></ul>
+    </div>
+
+</div>
+<!--TEXT-->
+<div class="TEXT">
+  <p style="margin-top: 200px; margin-left: 200px;">
+    <p>Школа ― это мгновение, в которое ребенок становится взрослым. </p>
+    <p>Эта цитата как нельзя лучше описывает весь период школьного обучения.</p> 
+    <p>Конечно, для первоклассника 11 предстоящих лет обучения кажутся целой вечностью,</p>
+    <p>но у одиннадцатиклассника ― другое мнение по этому поводу. </p> 
+    <p>Все это разнообразие мнений мы попробуем представить вам, собрав цитаты про школу.</p>
+    <p>Ироничные и со смыслом высказывания должны помочь найти ответ на вопрос, </p>
+    <p> что вы делали или до сих пор делаете в стенах школы,</p>
+    <p>и что полезного она смогла или не смогла дать.</p>
+  </p>
+
+</div>
+
+
+
+
+
+<!--Календарь-->
+        <table id="calendar2">
+            <thead>
+              <tr><td>‹<td colspan="5"><td>›
+              <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
+            <tbody>     
+          </table>
+          
+          <script>
+          function Calendar2(id, year, month) {
+          var Dlast = new Date(year,month+1,0).getDate(),
+              D = new Date(year,month,Dlast),
+              DNlast = new Date(D.getFullYear(),D.getMonth(),Dlast).getDay(),
+              DNfirst = new Date(D.getFullYear(),D.getMonth(),1).getDay(),
+              calendar = '<tr>',
+              month=["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"];
+          if (DNfirst != 0) {
+            for(var  i = 1; i < DNfirst; i++) calendar += '<td>';
+          }else{
+            for(var  i = 0; i < 6; i++) calendar += '<td>';
+          }
+          for(var  i = 1; i <= Dlast; i++) {
+            if (i == new Date().getDate() && D.getFullYear() == new Date().getFullYear() && D.getMonth() == new Date().getMonth()) {
+              calendar += '<td class="today">' + i;
+            }else{
+              calendar += '<td>' + i;
+            }
+            if (new Date(D.getFullYear(),D.getMonth(),i).getDay() == 0) {
+              calendar += '<tr>';
+            }
+          }
+          for(var  i = DNlast; i < 7; i++) calendar += '<td>&nbsp;';
+          document.querySelector('#'+id+' tbody').innerHTML = calendar;
+          document.querySelector('#'+id+' thead td:nth-child(2)').innerHTML = month[D.getMonth()] +' '+ D.getFullYear();
+          document.querySelector('#'+id+' thead td:nth-child(2)').dataset.month = D.getMonth();
+          document.querySelector('#'+id+' thead td:nth-child(2)').dataset.year = D.getFullYear();
+          if (document.querySelectorAll('#'+id+' tbody tr').length < 6) {  // чтобы при перелистывании месяцев не "подпрыгивала" вся страница, добавляется ряд пустых клеток. Итог: всегда 6 строк для цифр
+              document.querySelector('#'+id+' tbody').innerHTML += '<tr><td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;';
+          }
+          }
+          Calendar2("calendar2", new Date().getFullYear(), new Date().getMonth());
+          // переключатель минус месяц
+          document.querySelector('#calendar2 thead tr:nth-child(1) td:nth-child(1)').onclick = function() {
+            Calendar2("calendar2", document.querySelector('#calendar2 thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar2 thead td:nth-child(2)').dataset.month)-1);
+          }
+          // переключатель плюс месяц
+          document.querySelector('#calendar2 thead tr:nth-child(1) td:nth-child(3)').onclick = function() {
+            Calendar2("calendar2", document.querySelector('#calendar2 thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar2 thead td:nth-child(2)').dataset.month)+1);
+          }
+          </script>
+</body>
+<footer>
+  <div class="footdown"><hr size="10px" width="100%" color="black">
+    <p class="footerp">Sadykov Zhokhangir ⓒ 2020</p>
+    <p class="footertext">ГУ «Гимназия им. С. Мауленова »</p>
+    <p class="adress"> КОСТАНАЙ, УЛИЦА АЛТЫНСАРИНА, дом 112</p>
+    </div>
+</footer>
+</html>
